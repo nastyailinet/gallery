@@ -1,0 +1,19 @@
+# Local/editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+node_modules/
+*.log
+
+# Previous hosting provider and local credentials
+/.openai/
+.env
+.env.*
+!.env.example
+
+# Temporary archives and checks
+*.zip
+*.tar.gz
+/work/
