@@ -147,6 +147,21 @@ button,input,select,small{font-weight:400}
 
 .detail-header>.micro,.art-story .story-label{font-family:Manrope,sans-serif;font-size:13px;font-weight:400;letter-spacing:.025em;line-height:1.6}
 
+/* Mobile header groups share one horizontal centerline. */
+@media(max-width:650px){
+ .masthead{height:64px;display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;gap:8px;padding:0}
+ .artist{position:static;order:1;transform:none;flex-shrink:0;font-size:clamp(19px,5.1vw,24px);white-space:nowrap}
+ .view-nav{position:static;order:0;flex-direction:row;align-items:center;justify-content:flex-start;gap:clamp(8px,2.5vw,14px);flex-shrink:0}
+ .view-button,.about-button{font-size:clamp(10px,2.8vw,12px);letter-spacing:.005em;line-height:1.4;min-height:44px;white-space:nowrap}
+ .view-button{padding:12px 0}
+ .view-button.active:after{bottom:7px}
+ .about-button{order:2;align-self:center;flex-shrink:0;margin:0;padding:12px 0}
+ body:not([data-input="keyboard"]) :is(button,a,input,select,[tabindex]):focus{outline:none}
+ body[data-input="keyboard"] :is(button,a,input,select,[tabindex]):focus-visible{outline:1px solid #24242066;outline-offset:4px}
+ .field-zoom{padding:0}
+ #fieldZoom{height:44px;touch-action:none}
+}
+
 /* Compact footer, movable works and a calmer reading carousel. */
 .site-footer{height:47px;gap:24px}
 .footer-edition,.footer-edition i,.footer-period,.footer-period b,#footerLabel{font-size:11.5px;letter-spacing:-.015em;line-height:1.35;font-weight:400}
